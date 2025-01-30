@@ -104,14 +104,14 @@ resource "aws_route_table_association" "public-b-association" {
 
 # шлюз NAT
 resource "aws_eip" "nat-a" {
-  domain = "vpc"
+  vpc = true
   tags = {
     "Name" = "${local.vpc_name}-NAT-a"
   }
 }
 
 resource "aws_eip" "nat-b" {
-  domain = "vpc"
+  vpc = true
   tags = {
     "Name" = "${local.vpc_name}-NAT-b"
   }
