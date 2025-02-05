@@ -2,7 +2,7 @@ output "vpc_id" {
   value = aws_vpc.main.id
 }
 
-output "cluster_subnet_ids" {
+output "subnet_ids" {
   value = [
     aws_subnet.public-subnet-a.id,
     aws_subnet.public-subnet-b.id,
